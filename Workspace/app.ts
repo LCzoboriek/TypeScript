@@ -1,5 +1,7 @@
 function add(n1: number, n2: number) {
-  console.log(typeof n1);
+  if (typeof n1 !== "number" || typeof n2 !== "number") {
+    throw new Error("Incorrect input!"); // This is how we throw an error in regular javascript, there is better ways to do this in typescript however
+  }
   return n1 + n2;
 }
 
